@@ -6,6 +6,10 @@ import { CardFormComponent } from './card-form/card-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from './input/input.component';
 
+import { IConfig, NgxMaskModule } from 'ngx-mask';
+
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +18,8 @@ import { InputComponent } from './input/input.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(options)
   ],
   providers: [],
   bootstrap: [AppComponent]
