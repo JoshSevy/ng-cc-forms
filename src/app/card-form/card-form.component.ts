@@ -17,7 +17,7 @@ export class CardFormComponent implements OnInit {
     cardNumber: new FormControl('', [
       Validators.required,
       Validators.minLength(16),
-      Validators.maxLength(16)
+      Validators.maxLength(16),
     ]),
     expiration: new DateFormControl('', [
       Validators.required,
@@ -26,7 +26,7 @@ export class CardFormComponent implements OnInit {
     securityCode: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
-      Validators.maxLength(3)
+      Validators.maxLength(3),
     ])
   });
 
